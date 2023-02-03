@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Poppins:wght@400;500;600;800&display=swap"
+        rel="stylesheet">
+    <!-- flowbite css cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css" rel="stylesheet" />
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Legal Solution</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
+    <!-- -------daisy cdn---- -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.47.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primaryColor: '#B68C5A',
+                        textColor1: '#414040',
+                        textColor2: '#707070',
+                        footerTextColor: '#CFCFCF',
+                    },
+                    fontFamily: {
+                        garamond: ['EB Garamond', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- navbar starts -->
+        <nav class=" bg-white px-2 sm:px-4 py-2.5 fixed w-full z-40 top-0 left-0 border-b border-gray-200">
+            <div class="flex flex-wrap items-center justify-center md:justify-around mx-auto">
+                <a href="#" class="flex items-center">
+                    <img src="images/logo2.png" class="h-6 mr-3 sm:h-9" alt="justice Logo">
+                </a>
+                <div class="flex md:order-2">
+
+                    <!-- The button to open modal -->
+                    <label for="my-modal" class="btn bg-primaryColor hover:bg-yellow-800 focus:outline-none">Free
+                        Consultation</label>
+                    <!-- -----------------------  -->
+
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  "
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white   font-poppins font-normal">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-white bg-yellow-700 rounded md:bg-transparent md:text-yellow-700 md:p-0 "
+                                aria-current="page">Home ></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-700 md:p-0 ">Services
+                                ></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-700 md:p-0">Cases
+                                ></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-700 md:p-0">Blog
+                                ></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-700 md:p-0">Contact
+                                Us ></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ------------------------------------- -->
+
+
+                <!-- modal area  -->
+                <input type="checkbox" id="my-modal" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-lg">Congratulations Your Are Enrolled for Free Consultation!</h3>
+                        <p class="py-4">You've been selected for a chance to get one year of subscription to use
+                            Justice for free!</p>
+                        <div class="modal-action">
+                            <label for="my-modal" class="btn">Yay!</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ------------------------------------- -->
+            </div>
+        </nav>
+        <!-- navbar ends -->
+
+        <!-- banner starts  -->
+        <div class="p-5 rounded-xl md:p-20 bg-cover bg-center h-5/6 md:w-3/4 mx-auto mt-16 md:mt-40 "
+            style="background-image: url('images/banner.png')">
+
+            <!-- banner child  -->
+            <div class="md:flex flex-col justify-center items-center text-center">
+                <h1 class="text-5xl md:text-7xl font-extrabold font-garamond text-white">We Provide Effective</h1>
+                <h1 class="text-5xl md:text-7xl font-extrabold font-garamond text-white">Legal Solutions</h1>
+                <p class="text-base font-normal text-white md:w-1/2 text-center my-7">Being charged with a criminal law
+                    or traffic offence can have a major impact on your life. You may be facing stressful consequences
+                    that might result in loss of licence or even loss of liberty.</p>
+                <!-- form section  -->
+                <form class="flex items-center justify-center mx-7">
+                    <label for="voice-search" class="sr-only">Search</label>
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+
+                        </div>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5 "
+                            placeholder="Search our services..." required>
+                        <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3">
+
+                        </button>
+                    </div>
+                    <button type="submit"
+                        class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-primaryColor rounded-lg border border-yellow-700 hover:hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-30">
+                        <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>Search
+                    </button>
+                </form>
+            </div>
+
+        </div>
+        <!-- banner ends  -->
+    </header>
+
+    <main>
+        <!-- legal practice area section  -->
+        <section class="mt-12 md:mt-28">
+            <div class="flex flex-col items-center">
+                <h2 class="text-4xl font-extralight font-garamond text-textColor1">The Legal Practice Area
+                </h2>
+                <p class="p-5 text-center md:w-2/4 mt-6 md:mb-9 text-textColor2 font-poppins">The Justice Department
+                    joins
+                    survivors, victim
+                    services providers, justice professionals and others in recognizing the month of January as National
+                    Stalking Awareness Month (NSAM).</p>
+                <!-- grid area  -->
+                <div class="grid grid-cols-1 md:grid-cols-3 w-2/3">
+                    <!-- 1 -->
+                    <div
+                        class=" md:px-8 py-6 flex flex-col justify-center items-center border-b-2 border-gray-200 max-sm:border-2 max-sm:border-gray-200 max-sm:bg-gradient-to-b max-sm:from-stone-100">
+                        <img src="images/business.png" alt="">
+                        <h3 class="text-textColor1 text-2xl font-garamond mt-4">Business Law</h3>
+                        <p class="text-textColor2 text-sm font-poppins text-center my-6">The Justice Department joins
+                            survivors,
+                            victim services providers, justice professionals and others in recognizing the month of
+                            January as National Stalking Awareness Month (NSAM).</p>
+                        <img src="images/frame.png">
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="md:px-8 py-6 flex flex-col justify-center items-center border-2 border-gray-200 bg-gradient-to-b from-stone-100 ">
+                        <img src="images/criminal.png" alt="">
+                        <h3 class="text-textColor1 text-2xl font-garamond mt-4">Criminal Law</h3>
+                        <p class="text-textColor2 text-sm font-poppins text-center my-6">The Justice Department joins
+                            survivors,
+                            victim services providers, justice professionals and others in recognizing the month of
+                            January as National Stalking Awareness Month (NSAM).</p>
+                        <img src="images/frame.png">
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class=" md:px-8 py-6 flex flex-col justify-center items-center border-b-2 border-gray-200 max-sm:border-2 max-sm:border-gray-200 max-sm:bg-gradient-to-b max-sm:from-stone-100">
+                        <img src="images/child.png" alt="">
+                        <h3 class="text-textColor1 text-2xl font-garamond mt-4">Child Support</h3>
+                        <p class="text-textColor2 text-sm font-poppins text-center my-6">The Justice Department joins
+                            survivors,
+                            victim services providers, justice professionals and others in recognizing the month of
+                            January as National Stalking Awareness Month (NSAM).</p>
+                        <img src="images/frame.png">
+                    </div>
+                    <!-- 4 -->
+                    <div
+                        class=" md:px-8 py-6 flex flex-col justify-center items-center  max-sm:border-2 max-sm:border-gray-200 max-sm:bg-gradient-to-b max-sm:from-stone-100">
+                        <img src="images/education.png" alt="">
+                        <h3 class="text-textColor1 text-2xl font-garamond mt-4">Education Law</h3>
+                        <p class="text-textColor2 text-sm font-poppins text-center my-6">The Justice Department joins
+                            survivors,
+                            victim services providers, justice professionals and others in recognizing the month of
+                            January as National Stalking Awareness Month (NSAM).</p>
+                        <img src="images/frame.png">
+                    </div>
+                    <!-- 5 -->
+                    <div
+                        class="md:px-8 py-6 flex flex-col justify-center items-center border-l-2 border-r-2 border-gray-200 max-sm:border-2 max-sm:border-gray-200 max-sm:bg-gradient-to-b max-sm:from-stone-100 ">
+                        <img src="images/divorce.png" alt="">
+                        <h3 class="text-textColor1 text-2xl font-garamond mt-4">Divorce Law</h3>
+                        <p class="text-textColor2 text-sm font-poppins text-center my-6">The Justice Department joins
+                            survivors,
+                            victim services providers, justice professionals and others in recognizing the month of
+                            January as National Stalking Awareness Month (NSAM).</p>
+                        <img src="images/frame.png">
+                    </div>
+                    <!-- 6 -->
+                    <div
+                        class=" md:px-8 py-6 flex flex-col justify-center items-center  max-sm:border-2 max-sm:border-gray-200 max-sm:bg-gradient-to-b max-sm:from-stone-100 ">
+                        <img src="images/tax.png" alt="">
+                        <h3 class="text-textColor1 text-2xl font-garamond mt-4">Tax Law</h3>
+                        <p class="text-textColor2 text-sm font-poppins text-center my-6">The Justice Department joins
+                            survivors,
+                            victim services providers, justice professionals and others in recognizing the month of
+                            January as National Stalking Awareness Month (NSAM).</p>
+                        <img src="images/frame.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Say section -->
+        <section class=" mt-28 mb-28">
+            <div class="relative">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-4xl font-extralight font-garamond text-textColor1 text-center">What Our Client Say
+                    </h2>
+                    <p class="text-textColor2 md:w-2/4 font-poppins text-center px-4 my-6">Our expert lawyer Larry
+                        Brazel has
+                        over 30
+                        years of experience representing clients in all sorts of matters, the last 16 years of which
+                        were
+                        spent as a barrister in all manner of courts in both NSW and QLD.</p>
+                </div>
+
+                <!-- carousel and top info -->
+                <div class="relative">
+                    <!-- carousel info -->
+                    <!-- <div class="flex flex-col items-center justify-center absolute top-3 md:top-10 z-30">
+                        <img class="w-16 h-16 border-2 border-white rounded-full" src="images/me.png" alt="">
+                        <h3 class="text-xs md:text-2xl font-extrabold font-garamond text-white">Al Murad Uzzaman
+                        </h3>
+                        <p class="text-xs md:text-xl font-poppins text-white">Web Developer</p>
+                        <p class="text-xs md:text-xl font-poppins text-center text-slate-200 md:w-2/4 p-4">Our expert
+                            lawyer Larry Brazel has over 30 years of experience representing clients in all sorts of
+                            matters, the last 16 years of which were spent as a barrister in all manner of courts in
+                            both NSW and QLD.</p>
+                    </div> -->
+                    <!-- carousel -->
+                    <div class="md:w-3/5 md:h-full mx-auto">
+
+                        <div id="default-carousel" class="relative" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <!-- carousel info -->
+                                    <div
+                                        class="flex flex-col items-center justify-center absolute top-3 md:top-10 z-30">
+                                        <img class="w-16 h-16 border-2 border-white rounded-full" src="images/me.png"
+                                            alt="">
+                                        <h3 class="text-xs md:text-2xl font-extrabold font-garamond text-white">Al Murad
+                                            Uzzaman
+                                        </h3>
+                                        <p class="text-xs md:text-xl font-poppins text-white">Web Developer</p>
+                                        <p
+                                            class="text-xs md:text-xl font-poppins text-center text-slate-200 md:w-2/4 p-4">
+                                            Our expert
+                                            lawyer Larry Brazel has over 30 years of experience representing clients in
+                                            all sorts of
+                                            matters, the last 16 years of which were spent as a barrister in all manner
+                                            of courts in
+                                            both NSW and QLD.</p>
+                                    </div>
+                                    <span
+                                        class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl ">First
+                                        Slide</span>
+                                    <img src="images/slider-1.jpg"
+                                        class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+                                        alt="...">
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <!-- carousel info -->
+                                    <div
+                                        class="flex flex-col items-center justify-center absolute top-3 md:top-10 z-30">
+                                        <img class="w-16 h-16 border-2 border-white rounded-full" src="images/me.png"
+                                            alt="">
+                                        <h3 class="text-xs md:text-2xl font-extrabold font-garamond text-white">Al Murad
+                                            Uzzaman
+                                        </h3>
+                                        <p class="text-xs md:text-xl font-poppins text-white">Web Developer</p>
+                                        <p
+                                            class="text-xs md:text-xl font-poppins text-center text-slate-200 md:w-2/4 p-4">
+                                            Our expert
+                                            lawyer Larry Brazel has over 30 years of experience representing clients in
+                                            all sorts of
+                                            matters, the last 16 years of which were spent as a barrister in all manner
+                                            of courts in
+                                            both NSW and QLD.</p>
+                                    </div>
+                                    <img src="images/slider-2.jpg"
+                                        class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                        alt="...">
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <!-- carousel info -->
+                                    <div
+                                        class="flex flex-col items-center justify-center absolute top-3 md:top-10 z-30">
+                                        <img class="w-16 h-16 border-2 border-white rounded-full" src="images/me.png"
+                                            alt="">
+                                        <h3 class="text-xs md:text-2xl font-extrabold font-garamond text-white">Al Murad
+                                            Uzzaman
+                                        </h3>
+                                        <p class="text-xs md:text-xl font-poppins text-white">Web Developer</p>
+                                        <p
+                                            class="text-xs md:text-xl font-poppins text-center text-slate-200 md:w-2/4 p-4">
+                                            Our expert
+                                            lawyer Larry Brazel has over 30 years of experience representing clients in
+                                            all sorts of
+                                            matters, the last 16 years of which were spent as a barrister in all manner
+                                            of courts in
+                                            both NSW and QLD.</p>
+                                    </div>
+                                    <img src="images/slider-3.jpg"
+                                        class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <!-- Slider indicators -->
+                            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                    aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                            </div>
+                            <!-- Slider controls -->
+                            <button type="button"
+                                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                                data-carousel-prev>
+                                <span
+                                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 " fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                                data-carousel-next>
+                                <span
+                                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 " fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                    <span class="sr-only">Next</span>
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- feature clients section  -->
+        <section class="md:w-3/4 mx-auto bg-primaryColor rounded-lg my-16 md:my-32 p-5">
+            <div class=" flex flex-col items-center">
+                <h2 class="text-4xl font-extralight font-garamond text-white">Our Featured Clients</h2>
+                <p class="text-footerTextColor font-poppins text-center md:w-3/4 my-6 ">At ABC Agency, we are proud to
+                    work with
+                    some of the most successful businesses in the industry. Our featured clients are a testament to our
+                    commitment to delivering results and building relationships with our partners. </p>
+                <!-- featured clients  -->
+                <div class="max-sm:flex-wrap flex gap-4">
+                    <!-- 1 -->
+                    <div
+                        class="flex flex-col items-center bg-gradient-to-t from-gray-50 to-gray-100 rounded-xl px-15 py-8">
+                        <img class="w-1/2 h-fit border-4 rounded-full border-primaryColor hover:scale-110 duration-500"
+                            src="images/client-1.png" alt="">
+                        <h3 class="text-xl font-extrabold text-yellow-800 mt-8 mb-3">Surya Tögöldör</h3>
+                        <p class="text-base font-semibold w-3/4 text-center text-zinc-500">Justice clients are an
+                            invaluable source of feedback for the justice system.
+                        </p>
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="flex flex-col items-center bg-gradient-to-t from-gray-50 to-gray-100 rounded-xl px-15 py-8">
+                        <img class="w-1/2 h-fit border-4 rounded-full border-primaryColor hover:scale-110 duration-500"
+                            src="images/client-2.png" alt="">
+                        <h3 class="text-xl font-extrabold text-yellow-800 mt-8 mb-3">Kanti Aurobindo</h3>
+                        <p class="text-base font-semibold w-3/4 text-center text-zinc-500">They can provide insight into
+                            how the services they received were provided
+                        </p>
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="flex flex-col items-center bg-gradient-to-t from-gray-50 to-gray-100 rounded-xl px-15 py-8">
+                        <img class="w-1/2 h-fit border-4 rounded-full border-primaryColor hover:scale-110 duration-500"
+                            src="images/client-3.png" alt="">
+                        <h3 class="text-xl font-extrabold text-yellow-800 mt-8 mb-3">Ranjeet Bishal</h3>
+                        <p class="text-base font-semibold w-3/4 text-center text-zinc-500">Their feedback is essential
+                            to ensure that the justice system upholds its values
+                        </p>
+                    </div>
+                    <!-- 4 -->
+                    <div
+                        class="flex flex-col items-center bg-gradient-to-t from-gray-50 to-gray-100 rounded-xl px-15 py-8">
+                        <img class="w-1/2 h-fit border-4 rounded-full border-primaryColor hover:scale-110 duration-500"
+                            src="images/client-4.png" alt="">
+                        <h3 class="text-xl font-extrabold text-yellow-800 mt-8 mb-3">Shreya Anil
+                        </h3>
+                        <p class="text-base font-semibold w-3/4 text-center text-zinc-500">Justice clients have a
+                            positive experience as they navigate the legal system.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ section  -->
+        <section>
+            <div class="flex flex-col items-center">
+                <h2 class=" text-4xl font-extralight font-garamond text-textColor1 text-center">Frequently Asked
+                    Any
+                    Questions</h2>
+                <p class="text-textColor2 font-poppins text-center md:w-1/2 px-4 my-6">As you can see, FAQ questions are
+                    essential for any organization, and if you want to know how to do FAQ and build the content of the
+                    list of FAQ questions, dive in.</p>
+            </div>
+            <!-- Accordion and image  -->
+            <div class="w-3/4 mx-auto md:flex items-center justify-center gap-6 border-3 border-red-400">
+                <!-- Accordion  -->
+                <div class="md:w-1/2">
+                    <div id="accordion-collapse" data-accordion="collapse">
+                        <!-- 1 -->
+                        <h2 id="accordion-collapse-heading-1">
+                            <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200    hover:bg-gray-100"
+                                data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                                aria-controls="accordion-collapse-body-1">
+                                <span>1. What is the difference between flex-box and grid?</span>
+                                <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-1" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-1">
+                            <div class="p-5 font-light border border-b-0 border-gray-200  ">
+                                <p class="mb-2 text-gray-500 ">Flexbox and Grid are both CSS layout
+                                    modules used to create dynamic webpages, but they have distinct differences. Flexbox
+                                    is a single-dimensional layout module designed to arrange elements into rows or
+                                    columns along a specific axis. On the other hand, Grid is a two-dimensional layout
+                                    module, allowing for elements to be placed into columns and rows simultaneously.</p>
+                                <p class="text-gray-500 ">Unlike Flexbox, Grid includes features such
+                                    as gaps and grid lines, which allow for more precise positioning of elements on the
+                                    page. Ultimately, the decision to use Flexbox or Grid depends on the desired design
+                                    of the webpage and how it needs to be laid out.</p>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <h2 id="accordion-collapse-heading-2">
+                            <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200    hover:bg-gray-100 "
+                                data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-2">
+                                <span>2. What is the purpose of media query?</span>
+                                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-2" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-2">
+                            <div class="p-5 font-light border border-b-0 border-gray-200 ">
+                                <p class="mb-2 text-gray-500 ">The purpose of media query is to
+                                    provide a way for web developers to tailor their websites to specific devices and
+                                    viewport sizes. By using this feature, developers can create different stylesheets
+                                    and contents depending on the size of the device's screen or window and provide a
+                                    better experience for their users.</p>
+                                <p class="text-gray-500 ">Media queries also allow web developers to
+                                    create responsive design which is optimized for different types of devices ranging
+                                    from desktop computers to smartphones and tablets.</p>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <h2 id="accordion-collapse-heading-3">
+                            <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200   hover:bg-gray-100 "
+                                data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-3">
+                                <span>3. What is CSS box-model and how does it work?</span>
+                                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-3" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-3">
+                            <div class="p-5 font-light border border-t-0 border-gray-200 ">
+                                <p class="mb-2 text-gray-500 ">The CSS box-model is a system of
+                                    styling HTML elements. It consists of four main components: margin, border, padding,
+                                    and content. Margin defines the distance between an element and other elements
+                                    around it; borders create a line around the element; padding adds space between the
+                                    border and the content itself; and content is the actual material inside the
+                                    element.</p>
+                                <p class="mb-2 text-gray-500 ">Together, these four areas work
+                                    together to create a design that can be easily adjusted and manipulated with
+                                    different properties in order to achieve various effects.</p>
+
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <h2 id="accordion-collapse-heading-4">
+                            <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200   hover:bg-gray-100 "
+                                data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-4">
+                                <span>4. What is semantic tag?</span>
+                                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-4" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-4">
+                            <div class="p-5 font-light border border-t-0 border-gray-200 ">
+                                <p class="mb-2 text-gray-500 ">Semantic tags are HTML elements that
+                                    provide meaning to the web page. They provide structure and help search engines
+                                    better understand the content on the page. Semantic tags can also be used to define
+                                    headings, paragraphs, lists, etc. which make it easier for users to navigate through
+                                    a website or web application.</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Accordion FAQ image  -->
+                <div class="md:w-1/2">
+                    <img src="images/faq.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- contact us section  -->
+        <section class="my-16 md:my-28">
+            <div class="flex flex-col items-center">
+                <h2 class="text-4xl font-extralight font-garamond text-textColor1 text-center">Contact With Us</h2>
+                <p class="text-textColor2 font-poppins text-center md:w-1/2 px-4 my-6">If you have any questions,
+                    comments or
+                    concerns about our products or services, please don't hesitate to contact us. We're here to help and
+                    make sure you get the best experience possible. Our customer service team is available 24/7 to
+                    answer any inquiries you may have. You can reach us by email, phone or chat - whatever works for
+                    you!</p>
+            </div>
+
+            <div class="md:flex gap-6 items-center justify-center md:w-3/4 mx-auto">
+                <!-- contact info area  -->
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 place-content-center">
+                        <!-- 1 -->
+                        <div class=" px-12 py-8 flex flex-col justify-center items-center bg-stone-100 rounded-tl-lg">
+                            <img src="images/location.png" alt="">
+                            <h3 class="text-textColor1 text-2xl font-garamond my-4">Address</h3>
+                            <p class="text-textColor2 font-poppins text-center my-1">A108 Adam Street,</p>
+                            <p class="text-textColor2 font-poppins text-center">New York, NY 535022</p>
+
+                        </div>
+                        <!-- 2 -->
+                        <div
+                            class="px-12 py-8 flex flex-col justify-center items-center bg-stone-100 border-b-2 border-l-2 border-gray-300 rounded-tr-lg">
+                            <img src="images/call.png" alt="">
+                            <h3 class="text-textColor1 text-2xl font-garamond my-4">Call Us</h3>
+                            <p class="text-textColor2 font-poppins text-center my-1">+88 01750 00 00 00</p>
+                            <p class="text-textColor2 font-poppins text-center">+88 01750 00 00 00</p>
+
+                        </div>
+                        <!-- 3 -->
+                        <div
+                            class=" px-12 py-8 flex flex-col justify-center items-center bg-stone-100 border-t-2 border-r-2 border-gray-300 rounded-bl-lg">
+                            <img src="images/email.png" alt="">
+                            <h3 class="text-textColor1 text-2xl font-garamond my-4">Email Us</h3>
+                            <p class="text-textColor2 font-poppins text-center my-1">info@gmail.com</p>
+                            <p class="text-textColor2 font-poppins text-center">info@gmail.com</p>
+
+                        </div>
+                        <!-- 4 -->
+                        <div class=" px-12 py-8 flex flex-col justify-center items-center bg-stone-100 rounded-br-lg">
+                            <img src="images/time.png" alt="">
+                            <h3 class="text-textColor1 text-2xl font-garamond my-4">Working Hours</h3>
+                            <p class="text-textColor2 font-poppins text-center my-1">Mon-Fri: 9AM to 5PM</p>
+                            <p class="text-textColor2 font-poppins text-center">Sunday: 9AM to 1 PM</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- form area  -->
+                <div class="md:w-1/2 max-sm:mt-10 max-sm:p-5">
+
+                    <form class="h-full">
+                        <div class="mb-6">
+                            <input type="text" id="first_name"
+                                class="bg-stone-100 border-0 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 "
+                                placeholder="YOUR NAME" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <input type="email" id="email"
+                                class="bg-stone-100 border-0 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                                placeholder="YOUR EMAIL" required>
+                        </div>
+                        <div class="mb-6">
+                            <input type="text" id="first_name"
+                                class="bg-stone-100 border-0 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 "
+                                placeholder="SUBJECT" required>
+                        </div>
+                        <textarea id="message" rows="4"
+                            class="mb-6 block p-4 w-full  text-gray-900 bg-stone-100 border-0 rounded-lg  focus:ring-blue-500 focus:border-blue-500 "
+                            placeholder="Write your thoughts here..."></textarea>
+
+                        <button type="submit"
+                            class="text-white bg-primaryColor hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full px-5 py-4 text-center">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" bg-gray-900 h-auto p-10 md:p-32">
+        <div class=" w-3/4 mx-auto md:grid grid-cols-4 gap-8">
+            <!-- 1 -->
+            <div>
+                <img class="mb-11" src="images/logo.png" alt="">
+                <p class="text-poppins text-footerTextColor">A justice-based company is one that is committed to
+                    providing its clients with the highest quality of services possible.</p>
+            </div>
+            <!-- 2 -->
+            <div>
+                <h2 class="text-2xl font-extralight font-garamond text-white max-sm:mt-11 md:mb-11">Useful Links</h2>
+                <p class="text-poppins text-footerTextColor mb-2">Homes</p>
+                <p class="text-poppins text-footerTextColor mb-2">About Us</p>
+                <p class="text-poppins text-footerTextColor mb-2">Cases</p>
+                <p class="text-poppins text-footerTextColor mb-2">Blog</p>
+                <p class="text-poppins text-footerTextColor mb-2">Contact Us</p>
+            </div>
+            <!-- 3 -->
+            <div>
+                <h2 class="text-2xl font-extralight font-garamond text-white max-sm:mt-11 md:mb-11">Contact Now</h2>
+                <p class="text-poppins text-footerTextColor">555 4th 5t NW, Washington</p>
+                <p class="text-poppins text-footerTextColor mb-2">DC 20530, United States</p>
+
+                <p class="text-poppins text-footerTextColor">+88 01750 000 000</p>
+                <p class="text-poppins text-footerTextColor mb-2">+88 01750 000 000</p>
+
+                <p class="text-poppins text-footerTextColor">info@gmail.com</p>
+                <p class="text-poppins text-footerTextColor mb-2">info@gmail.com</p>
+            </div>
+            <!-- 4 -->
+            <div>
+                <h2 class="text-2xl font-extralight font-garamond text-white max-sm:mt-11 md:mb-11">Subscribe</h2>
+                <p class="text-poppins text-footerTextColor mb-2">Subscribe for our latest & <br> Articles. We Won’t
+                    Give You
+                    Spam Mails</p>
+
+                <form>
+                    <label for="email" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Send</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        </div>
+                        <input type="email" id="email"
+                            class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Email" required>
+                        <button type="submit"
+                            class="text-white absolute right-2.5 bottom-2.5 bg-primaryColor hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Send</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- flowbite js cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+</body>
+
+</html>
